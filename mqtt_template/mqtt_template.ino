@@ -88,6 +88,7 @@ void loop() {
       // value from sensor DHT22, PZEM
       snprintf(value, sizeof(value), "%.2f", 2.31);
       strcat (str,value);
+      strcat (str,",");
       client.publish("/ESP/LED",str);
   }
   delay(2000);
